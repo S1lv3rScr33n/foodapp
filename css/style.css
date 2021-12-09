@@ -1,0 +1,276 @@
+/* Обнуление настроек браузера для страницы*/
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Глобальные настройки */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    сolor: #737373;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    min-width: 320px;
+    max-width: 1080px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+}
+
+/* Шапка сайта */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 15px;
+}
+
+.nav_menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu_list {
+    margin-left: 94px;
+}
+
+.list_item {
+    font-weight: 600;
+    color: #252B42;
+    line-height: 28px;
+}
+
+.list_item:hover {
+    color: #FA4A0C;
+}
+
+/* Блок загрузки */
+
+.download_wrap {
+    padding: 75px 0 145px 0;
+    background-image: url("../images/bg-app.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*margin-bottom: 27px;*/
+}
+
+.downloadContent {
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+}
+
+.nameApp {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 3rem;
+    line-height: 5rem;
+    margin-bottom: 30px;
+}
+
+.subtitle {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 60px;
+}
+
+/* Кнопка */
+
+.btn {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    padding: 15px 60px;
+    background-color: transparent;
+    display: inline-block;
+    margin: 0 15px;
+    /*margin-left: 35px;*/
+}
+
+.btn-red {
+    background: #FA4A0C;
+    border-color: #FA4A0C;
+}
+
+/* Блок инструкции */
+
+.instructions_wrap {
+    padding: 50px 0;
+    margin-bottom: 105px;
+}
+
+.partTitle {
+    font-weight: 600;
+    font-size: 2.75rem;
+    line-height: 2.25rem;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.instructionsBlock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.instructionsBlock:last-child {
+    margin-bottom: 0;
+}
+
+.instructionsImage {
+    width: 47%;
+    text-align: center;
+}
+
+.instructionsText {
+    width: 50%;
+}
+
+.instructionsUpTitle {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    color: #FA4A0C;
+    margin-bottom: 20px;
+}
+
+.instructionsTitle {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    color: #252B42;
+    margin-bottom: 30px;
+}
+
+.instructionsSubtitle {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.375rem;
+    color: #737373;
+}
+
+.instructionsBlock:nth-child(3n) {
+    flex-direction: row-reverse;
+}
+
+/* Подвал сайта */
+
+.footer_wrap {
+    padding: 70px 0;
+}
+
+.footer_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_copyright {
+    color: #5C5C5C;
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+}
+
+/* Адаптив */
+
+@media (max-width: 800px) {
+    .header {
+        flex-direction: column;
+    }
+    .logo {
+        margin-bottom: 30px;
+    }
+    .menu_list {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .nameApp {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+    .title {
+        font-size: 2rem;
+        line-height: 3.5rem;
+    }
+    .subtitle {
+        font-size: 1.25rem;
+    }
+    .download_wrap {
+        padding: 40px 0 70px 0;
+    }
+    .partTitle {
+        font-size: 2rem;
+        margin-bottom: 50px;
+    }
+    .instructionsBlock {
+        flex-direction: column-reverse;
+    }
+    .instructionsText {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .instructionsImage {
+        width: 100%;
+    }
+    .instructionsBlock:nth-child(3n) {
+        flex-direction: column-reverse;
+    }
+    .instructionsUpTitle {
+        font-size: 1.25rem;
+        line-height: 2.5rem;
+    }
+    .instructionsTitle {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+}
+@media(max-width: 600px) {
+    .btn {
+        display: block;
+        margin: 30px auto;
+        width: 290px;
+        box-sizing: border-box;
+    }
+    .footer_wrap {
+        padding: 30px 0;
+    }
+    .footer_info {
+        flex-direction: column;
+    }
+    .footer_logo {
+        margin-bottom: 30px;
+    }
+    .nav_menu {
+        justify-content: center;
+    }
+    .menu_list {
+        margin: 10px 15px;
+    }
+}
